@@ -1,13 +1,19 @@
 <phpunit bootstrap="../simpleframework/autoload.php">
     <testsuites>
-        <testsuite name="string-methods">
-            <file>../simpleframework/Tests/library/simpleframework/Utils/StringMethodsTest.php</file>
+        <!--<testsuite name="string-methods">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Utils/StringMethodsTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="array-methods">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Utils/ArrayMethodsTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="reflection-inspector">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Reflection/InspectorTest.php</file>-->
+        <!--</testsuite>-->
+        <testsuite name="base-class">
+            <file>../simpleframework/Tests/library/simpleframework/Core/BaseTest.php</file>
         </testsuite>
-        <testsuite name="array-methods">
-            <file>../simpleframework/Tests/library/simpleframework/Utils/ArrayMethodsTest.php</file>
-        </testsuite>
-        <testsuite name="reflection-inspector">
-            <file>../simpleframework/Tests/library/simpleframework/Reflection/InspectorTest.php</file>
+        <testsuite name="base-class">
+            <file>../simpleframework/Tests/library/simpleframework/Cache/CacheTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

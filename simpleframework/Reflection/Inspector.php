@@ -54,7 +54,7 @@ class Inspector
     /**
      * @return string
      */
-    protected function _getClassComment() : string
+    protected function _getClassComment()
     {
         $reflection = new \ReflectionClass($this->_class);
         return $reflection->getDocComment();
@@ -64,7 +64,7 @@ class Inspector
      * @param $property
      * @return string
      */
-    protected function _getPropertyComment($property) : string
+    protected function _getPropertyComment($property)
     {
         $reflection = new \ReflectionProperty($this->_class, $property);
         return $reflection->getDocComment();
@@ -75,7 +75,7 @@ class Inspector
      * @return string
      */
     
-    protected function _getMethodComment($method) : string
+    protected function _getMethodComment($method)
     {
         $reflection = new \ReflectionMethod($this->_class, $method);
         return $reflection->getDocComment();
@@ -84,7 +84,7 @@ class Inspector
     /**
      * @return \ReflectionProperty[]
      */
-    protected function _getClassProperties() : array
+    protected function _getClassProperties()
     {
         $reflection = new \ReflectionClass($this->_class);
         return $reflection->getProperties();
@@ -93,7 +93,7 @@ class Inspector
     /**
      * @return \ReflectionMethod[]
      */
-    protected function _getClassMethods() : array
+    protected function _getClassMethods()
     {
         $reflection = new \ReflectionClass($this->_class);
         return $reflection->getMethods();
@@ -110,7 +110,7 @@ class Inspector
      * @param $comment
      * @return array
      */
-    protected function _parse($comment) : array
+    protected function _parse($comment)
     {
         $meta = [];
         $pattern = "((@[a-zA-Z]+\s*[a-zA-Z0-9, ()_]*))";
@@ -132,7 +132,7 @@ class Inspector
      *
      * @return mixed
      */
-    public function getClassMeta() : array
+    public function getClassMeta()
     {
         if (!isset($this->_meta["class"])) {
             $comment = $this->_getClassComment();
@@ -155,7 +155,7 @@ class Inspector
      *
      * @return \ReflectionProperty[]
      */
-    public function getClassProperties() : array
+    public function getClassProperties()
     {
         if (!isset($this->_properties))
         {
@@ -173,7 +173,7 @@ class Inspector
      *
      * @return \ReflectionMethod[]
      */
-    public function getClassMethods() : array
+    public function getClassMethods()
     {
         if (!isset($this->_methods))
         {
@@ -192,7 +192,7 @@ class Inspector
      * @param $property
      * @return mixed
      */
-    public function getPropertyMeta($property) : array
+    public function getPropertyMeta($property)
     {
         if (!isset($this->_meta["properties"][$property]))
         {
@@ -215,7 +215,7 @@ class Inspector
      * @param $method
      * @return mixed
      */
-    public function getMethodMeta($method) : array
+    public function getMethodMeta($method)
     {
         if (!isset($this->_meta["methods"][$method]))
         {

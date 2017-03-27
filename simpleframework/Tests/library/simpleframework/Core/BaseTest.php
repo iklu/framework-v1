@@ -9,7 +9,14 @@
 namespace simpleframework\Tests\library\simpleframework\Core;
 
 
-class BaseTest
-{
+use PHPUnit\Framework\TestCase;
+use simpleframework\Hello;
 
+class BaseTest extends TestCase
+{
+    public function testBaseClass() {
+        $hello = new Hello();
+        $hello->world = "foo!";
+        $this->assertEquals("foo!", $hello->world);
+    }
 }
