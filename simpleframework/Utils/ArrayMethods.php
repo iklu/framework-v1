@@ -6,7 +6,7 @@
  * Time: 11:49
  */
 
-namespace framework;
+namespace simpleframework\Utils;
 
 /**
  * Class ArrayMethods

@@ -1,10 +1,13 @@
-<phpunit bootstrap="../framework/autoload.php">
+<phpunit bootstrap="../simpleframework/autoload.php">
     <testsuites>
         <testsuite name="string-methods">
-            <file>../framework/tests/library/framework/StringMethodsTest.php</file>
+            <file>../simpleframework/Tests/library/simpleframework/Utils/StringMethodsTest.php</file>
         </testsuite>
         <testsuite name="array-methods">
-            <file>../framework/tests/library/framework/ArrayMethodsTest.php</file>
+            <file>../simpleframework/Tests/library/simpleframework/Utils/ArrayMethodsTest.php</file>
+        </testsuite>
+        <testsuite name="reflection-inspector">
+            <file>../simpleframework/Tests/library/simpleframework/Reflection/InspectorTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

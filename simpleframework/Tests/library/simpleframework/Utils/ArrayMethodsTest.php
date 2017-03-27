@@ -6,10 +6,10 @@
  * Time: 12:02
  */
 
-namespace tests\library\framework;
+namespace simpleframework\tests\library\simpleframework\Utils;
 
 
-use framework\ArrayMethods;
+use simpleframework\Utils\ArrayMethods;
 use PHPUnit\Framework\TestCase;
 
 class ArrayMethodsTest extends TestCase

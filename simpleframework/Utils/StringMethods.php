@@ -5,7 +5,7 @@
  * Date: 27.03.2017
  * Time: 10:08
  */
-namespace framework;
+namespace simpleframework\Utils;
 
 /**
  * The match() and split() methods perform similarly to the preg_match_all() and preg_split() functions, but require less
@@ -24,14 +24,16 @@ class StringMethods
     /**
      * StringMethods constructor.
      */
-    private function __construct() {
+    private function __construct()
+    {
         //do nothing
     }
 
     /**
      * clone
      */
-    private function __clone() {
+    private function __clone()
+    {
         //do nothing
     }
 
@@ -43,14 +45,15 @@ class StringMethods
      * @param $pattern
      * @return string
      */
-    private static function _normalize($pattern) {
-        return self::$_delimiter.trim($pattern, self::$_delimiter).self::$_delimiter;
+    private static function _normalize($pattern) : string
+    {
+        return self::$_delimiter . trim($pattern, self::$_delimiter) . self::$_delimiter;
     }
 
     /**
      * @return string
      */
-    public static function getDelimiter()
+    public static function getDelimiter() : string
     {
         return self::$_delimiter;
     }
@@ -66,18 +69,19 @@ class StringMethods
     /**
      * The match() method will
      * return the first captured substring, the entire substring match, or null.
-     *
+     * @once @read
      * @param $string
      * @param $pattern
      * @return null
      */
-    public static function match($string, $pattern) {
+    public static function match($string, $pattern)
+    {
         preg_match_all(self::_normalize($pattern), $string, $matches, PREG_PATTERN_ORDER);
-        if(!empty($matches[1])) {
+        if (!empty($matches[1])) {
             return $matches[1];
         }
 
-        if(!empty($matches[0])) {
+        if (!empty($matches[0])) {
             return $matches[0];
         }
 
@@ -93,7 +97,8 @@ class StringMethods
      * @param null $limit
      * @return mixed
      */
-    public static function split($string, $pattern, $limit = null) {
+    public static function split($string, $pattern, $limit = null) : array
+    {
         $flags = PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE;
         return preg_split(self::_normalize($pattern), $string, $limit, $flags);
     }

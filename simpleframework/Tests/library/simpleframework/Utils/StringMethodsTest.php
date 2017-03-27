@@ -1,6 +1,6 @@
 <?php
-namespace tests\library\framework;
-use framework\StringMethods;
+namespace simpleframework\tests\library\simpleframework\Utils;
+use simpleframework\Utils\StringMethods;
 use PHPUnit\Framework\TestCase;
 
 
