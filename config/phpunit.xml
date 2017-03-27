@@ -1,0 +1,10 @@
+<phpunit bootstrap="../framework/autoload.php">
+    <testsuites>
+        <testsuite name="string-methods">
+            <file>../framework/tests/library/framework/StringMethodsTest.php</file>
+        </testsuite>
+        <testsuite name="array-methods">
+            <file>../framework/tests/library/framework/ArrayMethodsTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
