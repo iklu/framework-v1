@@ -1,0 +1,31 @@
+<phpunit bootstrap="../simpleframework/autoload.php">
+    <testsuites>
+        <!--<testsuite name="string-methods">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Utils/StringMethodsTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="array-methods">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Utils/ArrayMethodsTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="reflection-inspector">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Reflection/InspectorTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="base-class">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Core/BaseTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="redis-cache">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Cache/RedisCacheTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="binary-cache1">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheCompactTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="binary-cache2">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheSaveCompactTest.php</file>-->
+        <!--</testsuite>-->
+        <!--<testsuite name="binary-cache3">-->
+            <!--<file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheTest.php</file>-->
+        <!--</testsuite>-->
+        <testsuite name="binary-large-data">
+            <file>../simpleframework/Tests/library/simpleframework/Cache/BinaryLargeDataTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
