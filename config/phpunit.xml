@@ -12,8 +12,17 @@
         <testsuite name="base-class">
             <file>../simpleframework/Tests/library/simpleframework/Core/BaseTest.php</file>
         </testsuite>
-        <testsuite name="base-class">
-            <file>../simpleframework/Tests/library/simpleframework/Cache/CacheTest.php</file>
+        <testsuite name="redis-cache">
+            <file>../simpleframework/Tests/library/simpleframework/Cache/RedisCacheTest.php</file>
+        </testsuite>
+        <testsuite name="binary-cache1">
+            <file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheCompactTest.php</file>
+        </testsuite>
+        <testsuite name="binary-cache2">
+            <file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheSaveCompactTest.php</file>
+        </testsuite>
+        <testsuite name="binary-cache3">
+            <file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
