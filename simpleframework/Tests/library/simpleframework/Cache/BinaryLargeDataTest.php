@@ -38,7 +38,6 @@ class BinaryLargeDataTest extends TestCase
             $starttime = microtime(true);
             $dataFromCache = $cache->retrieve("names");
             $difftime = microtime(true)-$starttime;
-            print_r($dataFromCache);
             print "\nFrom Cache :".$difftime. " seconds";
         }
 

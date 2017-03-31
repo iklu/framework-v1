@@ -18,7 +18,7 @@ class ArrayMethodsTest extends TestCase
         $array = ["masina", "copac", "", "mancare "];
         $this->assertNotEmpty(ArrayMethods::clean($array));
         $this->assertEquals(3, count(ArrayMethods::clean($array)));
-        $this->assertEmpty(ArrayMethods::clean($array));
+        $this->assertNotEmpty(ArrayMethods::clean($array));
     }
 
     public function testTrimMethod(){

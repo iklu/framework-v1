@@ -11,7 +11,6 @@ namespace simpleframework\Tests\library\Cache;
 
 use PHPUnit\Framework\TestCase;
 use simpleframework\Cache\CacheFactory;
-use simpleframework\Hello;
 
 class RedisCacheTest extends TestCase
 {
@@ -19,16 +18,9 @@ class RedisCacheTest extends TestCase
         $cache = new CacheFactory(array(
                 "type" => "redis"
         ));
+
         $redis = $cache->initialize()->connect();
         $redis->set("name", "ov");
-        $data = array_fill(0, 1000000, "hi");
-
-        $redis->set("my_key", $data);
-
-        $t = microtime(true);
-        $data = $redis->get("my_key");
-        echo microtime(true) - $t;
-        // 0.061056137084961
 
         $this->assertEquals($redis->get("name"), "ov");
     }
