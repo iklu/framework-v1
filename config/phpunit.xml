@@ -1,6 +1,6 @@
 <phpunit bootstrap="../simpleframework/autoload.php">
     <testsuites>
-        <testsuite name="string-methods">
+     <!--    <testsuite name="string-methods">
             <file>../simpleframework/Tests/library/simpleframework/Utils/StringMethodsTest.php</file>
         </testsuite>
         <testsuite name="array-methods">
@@ -11,11 +11,11 @@
         </testsuite>
         <testsuite name="base-class">
             <file>../simpleframework/Tests/library/simpleframework/Core/BaseTest.php</file>
-        </testsuite>
+        </testsuite> -->
         <testsuite name="redis-cache">
             <file>../simpleframework/Tests/library/simpleframework/Cache/RedisCacheTest.php</file>
         </testsuite>
-        <testsuite name="binary-cache1">
+     <!--    <testsuite name="binary-cache1">
             <file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheCompactTest.php</file>
         </testsuite>
         <testsuite name="binary-cache2">
@@ -24,9 +24,9 @@
         <testsuite name="binary-cache3">
             <file>../simpleframework/Tests/library/simpleframework/Cache/BinaryCacheTest.php</file>
         </testsuite>
-        <!--<testsuite name="binary-large-data">-->
-            <!--<file>../simpleframework/Tests/library/simpleframework/Cache/BinaryLargeDataTest.php</file>-->
-        <!--</testsuite>-->
+        <testsuite name="binary-large-data">
+            <file>../simpleframework/Tests/library/simpleframework/Cache/BinaryLargeDataTest.php</file>
+        </testsuite>
         <testsuite name="ini-configuration-test">
             <file>../simpleframework/Tests/library/simpleframework/Configuration/IniConfigurationTest.php</file>
         </testsuite>
@@ -35,6 +35,6 @@
         </testsuite>
         <testsuite name="registry-test">
             <file>../simpleframework/Tests/library/simpleframework/Container/RegistryTest.php</file>
-        </testsuite>
+        </testsuite> -->
     </testsuites>
 </phpunit>

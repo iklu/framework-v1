@@ -6,28 +6,28 @@
  * Time: 10:07
  */
 
-/**
- * @param $class
- */
 function autoload($class)
 {
     $paths = explode(PATH_SEPARATOR, get_include_path());
+    $paths[]= ""; 
     $flags = PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE;
     $file = str_replace("\\", DIRECTORY_SEPARATOR, trim($class, "\\")).".php";
-    foreach ($paths as $path)
+    foreach($paths as $path)
     {
-        $combined = $path.DIRECTORY_SEPARATOR.$file;
-        if (file_exists($combined))
+          $combined = ".".$path.DIRECTORY_SEPARATOR.$file;
+           
+        if(file_exists($combined))
         {
-            include($combined);
+            include_once($combined);
             return;
         }
     }
-   // throw new Exception("{$class} not found");
+    //throw new Exception("{$class} the class was not found");
 }
-class Autoloader
+class Autoloader 
 {
-    public static function autoload($class){
+    public static function autoload($class)
+    {
         autoload($class);
     }
 }
