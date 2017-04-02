@@ -39,9 +39,10 @@ class ArrayMethods
      * @param $array
      * @return mixed
      */
-    public static function clean($array){
-        return array_filter($array, function($item){
-           return !empty($item);
+    public static function clean($array)
+    {
+        return array_filter($array, function ($item) {
+            return !empty($item);
         });
     }
 
@@ -55,8 +56,8 @@ class ArrayMethods
      */
     public static function trim($array)
     {
-        return array_map(function($item){
-           return trim($item);
+        return array_map(function ($item) {
+            return trim($item);
         }, $array);
     }
 
@@ -67,17 +68,32 @@ class ArrayMethods
     public static function toObject($array)
     {
         $result = new \stdClass();
-        foreach ($array as $key => $value)
-        {
-            if (is_array($value))
-            {
+        foreach ($array as $key => $value) {
+            if (is_array($value)) {
                 $result->{$key} = self::toObject($value);
-            }
-            else
-            {
+            } else {
                 $result->{$key} = $value;
             }
         }
         return $result;
+    }
+
+    /**
+     * The ArrayMethods::flatten method is useful for converting a multidimensional array into unidimensional array
+     *
+     * @param $array
+     * @param array $return
+     * @return array
+     */
+    public static function flatten($array, $return = array())
+    {
+        foreach ($array as $key => $value) {
+            if (is_array($value) || is_object($value)) {
+                $return = self::flatten($value, $return);
+            } else {
+                $return[] = $value;
+            }
+        }
+        return $return;
     }
 }
